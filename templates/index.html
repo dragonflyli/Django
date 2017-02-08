@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-xs-12 col-md-9">
+  {% for b in blocks %}
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <a href="/article/list/{{ b.id }}" style="font-size: 16px">{{ b.name }}</a>
+      <span class="pull-right">{{ b.manager }}</span>
+    </div>
+    <div class="panel-body">
+      {{ b.desc }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<div class="col-xs-12 col-md-3">
+  <div class="panel panel-info">
+    <div class="panel-heading"> 
+       <h3 class="panel-title"><div class="well">个人信息</div></h3>
+    </div>  
+  </div>
+</div>
+{% endblock %}
